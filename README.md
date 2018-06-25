@@ -9,7 +9,7 @@ This project aims to develop a Machine Learning (ML) algorithm that could be use
 
 # Approach of solving the problem:
 
-Took two datasets with train and test to get the abnormal and normal SPECT results.
+We will develop a prediction model for distinguishing normal and abnormal patients using two SPECT datasets: a training set and a testing set. The accuracy of the classification model developed in the training set will be assessed using the testing set.
 
 Training dataset has been binarized by using the following heuristic approach. For each
 feature, (2 X 22= 44 Attributes: one for rest, and one for
@@ -24,7 +24,7 @@ Rule 3:    IF [featurei < meanj - threshold] THEN Regioni ABN, where i is the nu
 
 Rule 4:    IF [feature stressi - feature resti] < threshold THEN Regioni ABN, where i is the number of ROIs from the specific part of the LV
 
-After creating a binarized training dataset, using a classification(regression) algorithm identify abnormal and normal classifications.
+After creating a binarized training dataset, using a classification algorithm identify abnormal and normal classifications.
 
 # Data Details: 
 The source of the SPECT dataset is UCI repository: https://archive.ics.uci.edu/ml/datasets/SPECT+Heart. The SPECT dataset contains data on 267 patients. Each patient is classified into two categories: normal and abnormal. The SPECT image of each patient was processed to extract 44 continuous features that summarize the image. Thus, the dataset contains 267 rows (patients) and 45 attributes. 
